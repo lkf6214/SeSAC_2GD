@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 태그</title>
+</head>
+<body>
+    
+    
+    <form>
+    text<input type="text">
+    <label for="email">email</label>
+    <input type="email" placeholder="이메일" value="value는 미리 텍스트가 써져 있는 값. 지워보면? placeholder에 입력한 값이 나타남">
+    <!-- label읍 웹 페이지 접근이 용이함, 시각장애인이 이용할 수 있는 스크린  -->
+    <label>
+    password<input type="password" placeholder="비밀번호">
+    </label>
+    <!-- placeholder은 input 태그 안에서 사용할 수 있음. label 안에는 사용하지 않음 -->
+
+<br />
+
+숫자 <input type="number" />
+<input type="color">
+<input type="range">
+<input type="file">
+<input type="date">
+
+<input type="button" value="버튼">
+<!-- submit 과 그냥 button은 실제로 서버로 전송할 수 있게 됨 -->
+<input type="submit" value="버튼">
+<button>버튼</button>
+
+    </form>
+
+<h5>다음 중 img 태그 속성인 것은? [radio]</h5>
+
+<input type="radio" name="radio"> title
+<input type="radio" name="radio"> value
+<input type="radio" name="radio"> alt
+<input type="radio" name="radio"> mouse
+
+<p style="background-color: antiquewhite;">
+
+    name 값을 radio로 묶어주면, 하나의 값만 선택할 수 있게 됨 <br/>
+    만약 name 값이 없으면, 다중선택할 수 있음
+</p>
+
+
+<!-- label 을 사용해야 한 묶음으로 사용하기 편하다! -->
+<!-- 글씨를 눌렀을 때 체크박스가 체크 됨 -->
+<h5>다음 중 input 태그 속성이 아닌 것은?</h5>
+<input type="checkbox" name="checkbox" id="text" /> <label for="text">text</label> 
+<input type="checkbox" name="checkbox" id="img" /> <label for="img">img</label> 
+<input type="checkbox" name="checkbox" id="click" /> <label for="click">click</label> 
+<input type="checkbox" name="checkbox" id="date" /> <label for="date">date</label> 
+
+<p style="background-color: antiquewhite;">
+    name 값을 radio로 묶어주면, 하나의 값만 선택할 수 있게 됨 <br/>
+    만약 name 값이 없으면, 다중선택할 수 있음
+</p>
+
+<!-- select -->
+<select name="" id="">
+    <!-- 분류의 제목을 설정해 주는 것을  optgroup 이라고 함 -->
+<optgroup label="여성용 사이즈">
+    <option value="">XL</option>
+    <option value="">L</option>
+    <option value="">M</option>
+    <option value="">S</option>
+</optgroup>
+
+<optgroup label="남성용 사이즈">
+    <option value="">XL</option>
+    <option value="">L</option>
+    <option value="">M</option>
+    <option value="">S</option>
+</optgroup>
+
+</select>
+
+
+<textarea name="" id="" cols="30" rows="10" placeholder="내용을 입력하세요" ></textarea>
+
+
+</body>
+</html>

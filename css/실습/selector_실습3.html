@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습3</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      section {
+        /* border: 1px solid red; */
+        position: absolute;
+        width: 500;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+      }
+
+      h3:hover {
+        background-color: black;
+        color: white;
+      }
+
+      textarea:hover {
+        background-color: rgb(221, 160, 221, 0.1);
+        border: 3px solid black;
+      }
+
+      button {
+        float: right;
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 0.5rem;
+        width: 60px;
+        border-radius: 10px;
+      }
+
+      button:active {
+        background-color: gainsboro;
+        color: red;
+      }
+
+      input.checkbox_red:checked + label {
+        background-color: red;
+        color: white;
+      }
+
+      input.checkbox_blue:checked + label {
+        background-color: blue;
+        color: white;
+      }
+
+      input.checkbox_yellow:checked + label {
+        background-color: yellow;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h3>건의사항을 작성해 주세요!</h3>
+      <textarea
+        name=""
+        id=""
+        cols="50"
+        rows="10"
+        placeholder="건의사항 🎈"
+      ></textarea>
+      <form action="">
+        <input type="checkbox" class="checkbox_red" id="red" /><label for="red"
+          >빨강</label
+        >
+        <input type="checkbox" class="checkbox_blue" id="blue" />
+        <label for="blue">파랑</label>
+        <input type="checkbox" class="checkbox_yellow" id="yellow" />
+        <label for="yellow">노랑</label>
+      </form>
+      <button>제출</button>
+    </section>
+  </body>
+</html>

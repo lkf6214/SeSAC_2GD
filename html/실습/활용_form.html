@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 활용 설문조사</title>
+</head>
+<body>
+
+  <section class="form_contents" style="border: 1px solid gray; border-radius: 2rem; position: absolute; transform: translate(-50%, -50%); top: 50%; left: 50%; padding: 2rem;">
+  
+    <form style="background-color: #fff9e3; padding: 2rem; ">
+    <h1 style="text-align: center;">설문조사</h1>
+    <div  class="name_box" style="text-align: right;">
+      <label>날짜 <input type="date" placeholder="홍길동" ></label>
+      <br>
+      <label>이름 <input type="text" placeholder="홍길동"></label>
+      <br>
+      <label>전화번호 <input type="text" placeholder="010-1234-5678"> </label>
+    </div>
+
+    <h4>1. 나이</h4>
+    <input type="radio" name="age" id="10"> <label for="10">10 대</label>
+    <input type="radio" name="age" id="20"> <label for="20">20 대</label>
+    <input type="radio" name="age" id="30"> <label for="30">30 대</label>
+    <input type="radio" name="age" id="40"> <label for="40">40 대</label>
+    <input type="radio" name="age" id="50"> <label for="50">50 대</label>
+    <input type="radio" name="age" id="60"> <label for="60">60 대 이상</label>
+    <hr>
+
+    <h4>2. 최종학력</h4>
+    <input type="radio" name="education" id="1"> <label for="1">고등학교 졸</label>
+    <input type="radio" name="education" id="2"> <label for="2">전문대 졸</label>
+    <input type="radio" name="education" id="3"> <label for="3">대학교 졸</label>
+    <input type="radio" name="education" id="4"> <label for="4">대학원 졸</label>
+    <hr>
+
+    <h4>3. 원하는 강의 (복수 응답 가능)</h4>
+    <input type="checkbox" name="checkbox" id="html"> <label for="html">html</label>
+    <input type="checkbox" name="checkbox" id="js"> <label for="js">javascript</label>
+    <input type="checkbox" name="checkbox" id="css"> <label for="css">css</label>
+    <input type="checkbox" name="checkbox" id="react"> <label for="react">React</label>
+    <input type="checkbox" name="checkbox" id="els"> <label for="els">기타</label> <input type="text" name="checkbox" id="els">
+    <hr>
+    
+    <h4>4. 원하는 강의 (복수 응답 가능)</h4>
+    <input type="checkbox" name="checkbox" id="Bootstrap"> <label for="Bootstrap">Bootstrap</label>
+    <input type="checkbox" name="checkbox" id="Mui"> <label for="Mui">Mui</label>
+    <input type="checkbox" name="checkbox" id="Figma"> <label for="Figma">Figma</label>
+    <input type="checkbox" name="checkbox" id="Figjam"> <label for="Figjam">Figjam</label>
+    <input type="checkbox" name="checkbox" id="Zeplin"> <label for="Zeplin">Zeplin</label>
+    <input type="checkbox" name="checkbox" id="Photoshop"> <label for="Photoshop">Photoshop</label>
+    <hr>
+    
+
+    <h4>5. 자유로운 의견을 제시해 주세요</h4>
+    <textarea  cols="80%" rows="10"  placeholder="하고싶은 말을 써 주세요 : &#41;"></textarea>
+    <button style="display: block; margin: auto; padding: 0.5rem; width: 5rem; background-color: rgba(21, 115, 79); border-radius: 0.5rem; border: 1px solid green ; color: #fff9e3;">제출</button>
+  </section>
+
+</form>
+</body>
+</html>

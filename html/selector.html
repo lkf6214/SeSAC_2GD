@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자1 - 기본선택자</title>
+    <style>
+        * {
+            color: white;
+            text-align: center;
+        }
+
+        h3 {
+            background-color: brown;
+            letter-spacing: 10;
+        }
+
+        li {
+            background-color: aquamarine;
+        }
+
+        span {
+            font-weight: bold;
+            font-size: 3rem;
+            color: blue;
+        }
+
+        /* 선택자 */
+        /* 우선순위 id > class > tag */
+        .sm {
+            color: blueviolet;
+        }
+
+        #id {
+            color: blue;
+        }
+    </style>
+
+
+</head>
+<body>
+    
+<ul>
+    <li class="sm" id="sm">뽀로로</li>
+    <li class="lg">루피</li>
+    <li class="sm">에디</li>
+    <li class="lg">포비</li>
+</ul>
+
+<h3>태그 선택자</h3>
+<span id="span_text">span</span>
+
+</body>
+</html>

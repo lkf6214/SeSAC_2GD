@@ -1,0 +1,56 @@
+section {
+  border: 5px solid blue;
+}
+
+article {
+  height: 5rem;
+  border: 1px solid red;
+}
+
+/* 직계 자식 선택자 '>' */
+/* 1, 2 동일함 */
+/* 1 */
+.first > h3 {
+  text-align: center;
+  background-color: yellowgreen;
+  color: green;
+}
+/* 2 */
+.first h3 {
+  text-align: center;
+  background-color: yellowgreen;
+  color: green;
+}
+
+.second h3 {
+  background-color: palevioletred;
+}
+
+/* 후손선택자 */
+/* 1, 2 동일한 것임 */
+/* 1 */
+.first li {
+  background-color: red;
+}
+
+/* 2 */
+.first > article > ul > li {
+  background-color: orange;
+}
+
+/* 인접형제 선택자 */
+/* fairy id 바로 뒤에 li가 있으면 바꿔줘. 
+그런데 만약 뒤에 span이 있으면 적용되지 않음! */
+#fairy + li {
+  background-color: aqua;
+}
+
+#fairy ~ li {
+  background-color: blueviolet;
+}
+
+/* 일치선택자 */
+/* 띄어쓰기 없음 */
+article.first {
+  background-color: yellow;
+}

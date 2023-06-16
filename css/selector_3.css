@@ -1,0 +1,38 @@
+.div1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  text-align: center;
+  line-height: 100px;
+}
+
+.div1:hover {
+  background-color: orange;
+}
+
+.div1:active {
+  background-color: yellow;
+}
+
+input:focus {
+  background-color: green;
+  color: white;
+  outline-color: blue;
+}
+
+a:visited {
+  color: rgb(205, 76, 214);
+}
+
+input#rabbit:checked + label {
+  background-color: purple;
+}
+
+/* hover, active, visited, focus, checked 
+ 
+:hover 마우스가 올라가있는 동안
+:active - 클릭, 엔터 눌리는 동안 
+:visited, - 요소가 링크일 때 방문했다면 스타일 변경
+:focus, 요소에 포커스가 머물러 있는 동안
+:checked 요소가 체크되었을 때
+ */

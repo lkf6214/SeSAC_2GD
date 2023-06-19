@@ -1,0 +1,118 @@
+.display_container > div {
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.display_container > span {
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.d-block {
+  display: block;
+  background-color: red;
+  border: 1px solid black;
+}
+
+.d-inline {
+  display: inline;
+  background-color: orange;
+  border: 1px solid black;
+  /* width, height 적용되지 않음.
+  padding, margin 가로로 적용되고 세로로는 적용안됨. */
+}
+
+.d-inline-block {
+  display: inline-block;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+.box {
+  background-color: aqua;
+  border: 1px solid black;
+}
+
+.box-vw {
+  width: 50vw;
+  height: 50vh;
+}
+
+.box-per {
+  /* 보모크기의 비율을 가져오는 것 */
+  /* 현재 부모는 body 인데, body는 높이를 가져오지 않는다. */
+  width: 50%;
+  height: 50%;
+}
+
+.rem {
+  font-size: 2rem;
+}
+
+.em {
+  font-size: 2em;
+}
+
+section > div {
+  background-color: blueviolet;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  border: 1px solid black;
+}
+
+.square {
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+}
+
+.d-none {
+  /* display: none; */
+  background-color: red;
+}
+.invisible {
+  /* visibility: hidden; */
+  background-color: orangered;
+}
+.opacity-0 {
+  opacity: 0;
+  background-color: tomato;
+}
+
+/* 실습  */
+.test_blue_box {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
+
+.test_blue_box:hover {
+  opacity: 0;
+  /* visibility: hidden; */
+}
+
+.square img[alt="푸"] {
+  width: 200px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-auto {
+  overflow: auto;
+  /* 넘필 때만 스크롤 생성 */
+}
+.overflow-scroll {
+  overflow: scroll;
+  /* 넘치지 않도록 스크롤 생성 */
+}
+.overflow-visible {
+  overflow: visible;
+  /* 넘치는 것 다 보여줌 */
+}

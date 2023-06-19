@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbit&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./attribute.css" />
+
+    <style>
+      /* 폰트는 맨 위에 작성하기 */
+      @import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
+      @font-face {
+        font-family: "KyoboHandwriting2022khn";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KyoboHandwriting2022khn.woff2")
+          format("woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      * {
+        /* font-size: 2rem; */
+      }
+
+      .font_link {
+        font-family: "Orbit", sans-serif;
+      }
+
+      .font_import {
+        font-family: "Bagel Fat One", cursive;
+      }
+
+      .noonnu_font {
+        font-family: "KyoboHandwriting2022khn";
+      }
+
+      .container {
+        width: 20rem;
+      }
+      .sentences {
+        font-weight: 900;
+        text-align: center;
+        /* 아래줄 */
+        text-decoration: underline;
+        /* 윗줄 */
+        /* text-decoration: overline; */
+        /* 중간 줄 */
+        /* text-decoration: line-through; */
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .content {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="font_link">font_link 안녕하세요</div>
+    <div class="font_import">font_import 안녕하세요</div>
+    <div class="noonnu_font">noonnu_font 안녕하세요</div>
+
+    <div class="container">
+      <p class="sentences">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus illo
+        vero blanditiis non iure assumenda. Repudiandae nemo dolorem, ut
+        doloremque quod tenetur mollitia voluptatum voluptate libero blanditiis
+        cupiditate veniam!
+      </p>
+    </div>
+
+    <a href="https://www.naver.com"> 네이버 바로가기 </a>
+
+    <hr style="margin: 2rem; border: 1px solid black" />
+
+    <!-- display 연습 -->
+    <div id="box" style="border: 5px solid green">
+      <div class="content">div</div>
+    </div>
+
+    <span id="box" style="border: 5px solid green">
+      <span class="content">span</span>
+    </span>
+
+    <div id="box" style="border: 5px solid green">
+      <span class="content">span</span>
+    </div>
+
+    <!-- 적용안됨 -->
+    <span id="box" style="border: 5px solid green">
+      <div class="content">span</div>
+    </span>
+
+    <hr style="margin: 2rem; border: 1px solid black" />
+
+    <!-- 2 -->
+    <section class="display_container">
+      <div class="d-block">block 1</div>
+      <div class="d-block">block 2</div>
+      <div class="d-block">block 3</div>
+      <div class="d-block">block 4</div>
+
+      <hr style="margin: 2rem; border: 1px solid black" />
+
+      <span class="d-inline">inline 1</span>
+      <span class="d-inline">inline 2</span>
+      <span class="d-inline">inline 3</span>
+      <span class="d-inline">inline 4</span>
+
+      <hr style="margin: 2rem; border: 1px solid black" />
+
+      <span class="d-inline-block">inline-block 1</span
+      ><span class="d-inline-block">inline-block 2</span
+      ><span class="d-inline-block">inline-block 3</span
+      ><span class="d-inline-block">inline-block 4</span>
+    </section>
+
+    <!-- 3 -->
+
+    <h2>단위</h2>
+    <div class="box box-px">px</div>
+    <div class="box box-vw">vw</div>
+    <div class="box box-per">per</div>
+    <div class="rem">
+      rem
+      <div class="rem">
+        rem
+        <div class="rem">rem</div>
+      </div>
+    </div>
+
+    <div class="em">
+      em
+      <div class="em">
+        em
+        <div class="em">em</div>
+      </div>
+    </div>
+
+    <section>
+      <div class="class1">class</div>
+      <div class="class2">class</div>
+      <div class="class3">class</div>
+      <div class="class4">class</div>
+    </section>
+
+    <div class="square">original</div>
+    <div class="square d-none">d none</div>
+    <div class="square invisible">invisible</div>
+    <div class="square opacity-0">opacity 0</div>
+    <div class="square">original</div>
+
+    <!-- 실습 -->
+    <div class="test_blue_box">200x200</div>
+    <hr />
+
+    <h2>overflow</h2>
+    <div class="square overflow-hidden">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ullam
+        soluta commodi saepe, suscipit rem! In, blanditiis, quas veritatis vitae
+        ea itaque ab voluptatibus voluptatum, architecto nam saepe reiciendis
+        sint?
+      </p>
+      <img src="./img/pooh.png" alt="푸" />
+    </div>
+    <div class="square overflow-auto">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ullam
+        soluta commodi saepe, suscipit rem! In, blanditiis, quas veritatis vitae
+        ea itaque ab voluptatibus voluptatum, architecto nam saepe reiciendis
+        sint?
+      </p>
+      <img src="./img/pooh.png" alt="푸" />
+    </div>
+    <div class="square overflow-scroll">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ullam
+        soluta commodi saepe, suscipit rem! In, blanditiis, quas veritatis vitae
+        ea itaque ab voluptatibus voluptatum, architecto nam saepe reiciendis
+        sint?
+      </p>
+      <img src="./img/pooh.png" alt="푸" />
+    </div>
+    <div class="square overflow-visible">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ullam
+        soluta commodi saepe, suscipit rem! In, blanditiis, quas veritatis vitae
+        ea itaque ab voluptatibus voluptatum, architecto nam saepe reiciendis
+        sint?
+      </p>
+      <img src="./img/pooh.png" alt="푸" />
+    </div>
+  </body>
+</html>

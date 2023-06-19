@@ -36,3 +36,86 @@ input#rabbit:checked + label {
 :focus, 요소에 포커스가 머물러 있는 동안
 :checked 요소가 체크되었을 때
  */
+
+/* 1 */
+/* zoo의 모든 것들 * */
+.zoo > * {
+  background-color: green;
+  color: white;
+  font-size: 1rem;
+}
+
+.zoo > li:last-child {
+  background-color: red;
+}
+
+/* 적용안됨! 왜? li가 첫번째라면, 바꾸라 인데 li가 두번째에 있어서 적용안됨 */
+.zoo > li:first-child {
+  background-color: orange;
+}
+
+/* li중 2번째 자식을 바꿔라 */
+.zoo > li:nth-of-type(2) {
+  background-color: yellow;
+}
+
+/* 전체자식 증 첫번째를 바꿔라 */
+.zoo > *:first-child {
+  background-color: greenyellow;
+}
+
+/* odd는 홀수 */
+.zoo > li:nth-child(odd) {
+  background-color: blue;
+}
+
+/* 2n+1이 홀수와 같음. n은 0부터 시작하기에 n은 0 */
+.zoo > li:nth-child(2n + 1) {
+  background-color: purple;
+}
+
+/* 2 */
+/* 실습 */
+.stripes > * {
+  color: white;
+  background-color: blue;
+}
+
+/* 짝수 */
+/* .stripes > div:nth-child(even) {
+  background-color: yellow;
+  color: blue;
+} */
+
+/* 두번째,
+네번째,
+여섯번째  */
+.stripes > div:nth-child(4n + 2) {
+  background-color: yellow;
+  color: blue;
+}
+
+/* 3 */
+/* 가상요소선택자 */
+/* ::after, ::before */
+
+.h3 {
+  background-color: yellow;
+  height: 50px;
+}
+
+/* 가상요소선택자에는 반드시 content가 들어가야함 */
+.h3::after {
+  content: "after";
+  color: brown;
+}
+
+.h3::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 100%;
+  background-color: rgb(28, 114, 85);
+  /* line-height: 50px; */
+  vertical-align: text-bottom;
+}

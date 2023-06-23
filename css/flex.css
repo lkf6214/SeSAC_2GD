@@ -1,0 +1,104 @@
+.container {
+  width: 80vw;
+  /* height: 30vw; */
+  margin: 0 auto;
+  background-color: rgb(255, 229, 144);
+  display: flex;
+
+  /* flex-direction 정렬 방향*/
+  /* flex-direction: row;
+  수평정렬 좌->우
+  flex-direction: row-reverse;
+  수평정렬 우->좌
+  flex-direction: column;
+  수직정렬 위->아래
+  flex-direction: column-reverse;
+  수직정렬 아래->위 */
+
+  /* justify-content: 주축에 대한 정렬 방법 */
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  justify-content: space-between;
+  /* 양 끝 붙이고 간격 아이템 간격 똑같이 배분 */
+  /* justify-content: space-around; */
+  /* 양끝 영역이 1 떨어지면 아이템 사이는 2간격ㅇ; 떨어짐 */
+  /* justify-content: space-evenly; */
+  /* 모든 영역이 공평하게 나눠짐 */
+
+  /* flex-wrap: 아이템을 줄 바꿀지 말지 결정; */
+  /* flex-wrap: nowrap; */
+  /* flex-wrap: wrap; */
+  /* flex-wrap: wrap-reverse; */
+
+  /* align-items: 교차측에 대해 item을 배치하는 방법; */
+  /* align-items: stretch; */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  /* align-items: center; */
+
+  /* align-content: 교차 측에 대한 여러줄 정렬; */
+  flex-wrap: wrap;
+  /* 일때만 적용됨 */
+  /* align-content: flex-start; */
+  /* align-content: flex-end; */
+  /* align-content: center; */
+  /* align-content: space-around; */
+  align-content: space-between;
+  /* align-content: space-evenly; */
+}
+
+.items {
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 100px;
+}
+
+.item1 {
+  background-color: red;
+}
+.item2 {
+  background-color: rgb(255, 84, 84);
+}
+.item3 {
+  background-color: rgb(250, 122, 122);
+}
+.item4 {
+  background-color: rgb(255, 177, 177);
+}
+.item5 {
+  background-color: rgb(255, 229, 229);
+}
+
+.container2 {
+  width: 100%;
+  height: 50vw;
+  margin: 1rem 0;
+  background-color: rgb(255, 229, 144);
+  display: flex;
+}
+
+.container2 .items {
+  flex-basis: 80px;
+  /* width: 50px; */
+}
+
+.container2 .item1 {
+  /* align-self: center; */
+  /* order: 1; */
+}
+
+.container2 .item2 {
+  height: auto;
+  font-size: 10px;
+  line-height: 20px;
+  /* flex-grow : 는 숫자만큼 비율을 나타냄. 1은 1대 1비율을 나타냄; */
+  flex-grow: 1;
+}
+
+.container2 .item3 {
+  flex-grow: 1;
+  /* flex-shrink: 3; */
+}

@@ -1,0 +1,77 @@
+.img-box {
+  background-color: purple;
+  width: 400px;
+  height: 200px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 5px solid red;
+}
+
+img:hover {
+  /* perspective: ;
+transform: ;
+translate: ;
+scale: ;
+rotate: ; */
+  /* 이동함수 */
+  transform: translate(20px, 20px);
+  transform: translateX(30px);
+  transform: translateY(30px);
+
+  /* 크기함수 */
+  transform: scale(2);
+  transform: scaleX(2);
+  transform: scaleY(0.5);
+  transform: translateX(200px) scale(1.5);
+
+  /* 회전함수 */
+  transform: rotate(-90deg);
+  transform: perspective(100px) rotateX(45deg);
+  transform: perspective(100px) rotateY(45deg);
+  transform: perspective(500px) rotateY(180deg);
+  backface-visibility: hidden;
+
+  /* 기울임 */
+  transform: skew(30deg, 0deg);
+  transform: skewX(60deg);
+}
+
+.boxs {
+  width: 100px;
+  height: 100px;
+  background-color: skyblue;
+  border: 1px solid skyblue;
+  margin-bottom: 10px;
+  /* transition-duration: 1s; */
+}
+
+.box1 {
+  /* transition-property: 속성이름; */
+  /* transition-duration: ; */
+  /* transition-timing-function: 시간함수 ; */
+  /* ease(default) */
+  /* transition-delay: 동작 시작 시간을 얼마나 늦출지 ; */
+}
+
+.box1:hover {
+  background-color: red;
+  transform: translate(50px);
+  /* transform: rotateX(-90deg); */
+  transition-duration: 1s;
+  /* transition-delay: 1s; */
+  transform: property duration timing-function delay;
+}
+
+.box2 {
+  transition: all 2s ease 1s;
+}
+
+.box2:hover {
+  opacity: 0.5;
+  height: 150px;
+  transform: translateX(50px);
+}

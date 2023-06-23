@@ -1,0 +1,112 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox 마스터1</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      h4 {
+        text-align: center;
+        line-height: 64px;
+      }
+
+      header {
+        background-color: rgb(207, 207, 207);
+        padding: 10px;
+      }
+
+      li {
+        list-style: none;
+        margin: 5px;
+      }
+
+      ul {
+        flex-wrap: wrap;
+      }
+
+      .header1 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .header1 > .menus {
+        display: flex;
+        justify-content: center;
+      }
+
+      .header2 .menus {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      @media (max-width: 200px) {
+        .header2 .menus {
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      .header3 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .header3 > ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>Flex를 이용해 여러 종류의 Header를 만들어보자!</h4>
+    <hr />
+    <br />
+    <!-- header1 -->
+    <header class="header1">
+      <span>LOGO</span>
+      <ul class="menus">
+        <li>MENU1</li>
+        <li>MENU2</li>
+        <li>MENU3</li>
+      </ul>
+    </header>
+    <br />
+    <hr />
+    <br />
+    <!-- header2 -->
+    <header class="header2">
+      <ul class="menus">
+        <li>MENU1</li>
+        <li>MENU2</li>
+        <li>MENU3</li>
+      </ul>
+    </header>
+    <br />
+    <hr />
+    <br />
+    <!-- header3 -->
+    <header class="header3">
+      <span>LOGO</span>
+      <ul>
+        <li>MENU1</li>
+        <li>MENU2</li>
+        <li>MENU3</li>
+      </ul>
+      <span>LOGIN</span>
+    </header>
+  </body>
+</html>

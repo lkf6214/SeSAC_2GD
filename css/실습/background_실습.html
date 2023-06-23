@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background 실습</title>
+  </head>
+
+  <style>
+    /* .container {
+      background-color: orange;
+      width: 500px;
+      height: 500px;
+      background-image: "";
+    }
+    div .lion {
+    } */
+
+    .background {
+      width: 600px;
+      height: 600px;
+      border: 1px solid black;
+      background-image: url("../img/small.png");
+    }
+
+    .background-img {
+    }
+    .background-img-1 {
+      background-repeat: repeat-x;
+    }
+
+    .background-img-2 {
+      background-repeat: repeat-y;
+    }
+
+    .background-img-3 {
+      background-repeat: no-repeat;
+    }
+
+    .background-img-4 {
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .background-img-5 {
+      background-position: center;
+    }
+
+    .background-img-6 {
+      background-position: center;
+      background-size: 50px;
+    }
+
+    .background-img-7 {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 50px;
+    }
+
+    .background-img-8 {
+      background-position: center;
+      background-size: contain;
+    }
+
+    .background-img-9 {
+      background-position: center;
+      background-size: cover;
+    }
+
+    .background-img-10 {
+      background-size: cover;
+      /* no-repeat 하지 않아도 이미지 한개만 사용됨. */
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .background-img-11 {
+      background-size: contain;
+      background-repeat: no-repeat;
+      /* no-repeat 하지 않으면 이미지 여러개임.  */
+      background-position: center;
+      background-attachment: fixed;
+    }
+  </style>
+  <body>
+    <h2>background속성</h2>
+
+    <div class="background background-img">기본</div>
+    <div class="background background-img-1">repeat-x</div>
+    <div class="background background-img-2">repeat-y</div>
+    <div class="background background-img-3">no-repeat</div>
+    <div class="background background-img-4">no-repeat, position center</div>
+    <div class="background background-img-5">only position center</div>
+    <div class="background background-img-6">only position center</div>
+    <div class="background background-img-7">
+      no-repeat, position center, size 50px
+    </div>
+    <div class="background background-img-8">only position center</div>
+    <div class="background background-img-9">
+      background-position: center, background-size: cover
+    </div>
+    <div class="background background-img-10">
+      background-attachment: fixed; background-position: center;
+      background-size: cover;
+    </div>
+
+    <div class="background background-img-11">
+      background-attachment: fixed; background-position: center;
+      background-size: contain;background-repeat: no-repeat;
+    </div>
+    <!-- <div class="container">
+      <div class="lion">1</div>
+      <div class="lion">2</div>
+      <div class="lion">3</div>
+    </div> -->
+  </body>
+</html>

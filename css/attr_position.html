@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 2000px;
+        background: linear-gradient(pink, orange);
+        box-sizing: border-box;
+      }
+
+      div {
+        width: 100px;
+        height: 100px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 100px;
+        border: 1px solid black;
+      }
+
+      .position-static {
+        background: red;
+        /* 의미 없는 코드임. 구동되지 않음 */
+        position: static;
+        top: 100px;
+        left: 50px;
+      }
+
+      .position-relative {
+        background: yellow;
+        position: relative;
+        /* 자기 자신을 기준으로 이동한다. 문서 흐름을 해치지 않는다. */
+        left: 50px;
+        bottom: 50px;
+      }
+
+      .position-absolute {
+        /* 기준(부모요소의 위치 값)이 없을 때는 뷰포트 기준으로 움직임 */
+        /* 문서 흐름을 해친다 */
+        /* 기준은 position:static이 아니는 부모, 조상을 기준으로 움직인다 */
+        background: green;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0;
+        right: 0;
+      }
+
+      .position-fixed {
+        /* 뷰포트를 기준으로 움직임 */
+        /* 스크롤시에도 움직이지 않음 */
+        background: blue;
+        position: fixed;
+        left: 300px;
+      }
+      .parent {
+        position: fixed;
+        padding: 1rem;
+        width: 350px;
+        height: 100px;
+        /* border-radius: 50%; */
+        /* background-color: purple; */
+        color: rgb(255, 255, 255);
+        top: 200px;
+      }
+
+      .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+      }
+
+      .circle1 {
+        left: 0px;
+        z-index: 5;
+        background-color: rgb(255, 163, 163);
+      }
+
+      .circle2 {
+        left: 70px;
+        z-index: 4;
+        background-color: rgb(255, 190, 149);
+      }
+
+      .circle3 {
+        left: 140px;
+        background-color: rgb(255, 232, 149);
+        z-index: 3;
+      }
+
+      .circle4 {
+        left: 210px;
+        background-color: rgb(223, 255, 149);
+        z-index: 2;
+      }
+
+      .circle5 {
+        background-color: rgb(144, 161, 255);
+        left: 280px;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>position(static, relative, absolute, fixed)</h2>
+    <div class="position-static">static</div>
+    <div class="position-relative">relative1</div>
+    <div class="position-absolute">absolute</div>
+    <!-- <div class="position-fixed">fixed</div> -->
+    <div class="position-relative">relative2</div>
+
+    <div class="parent">
+      <div class="circle circle1">1</div>
+      <div class="circle circle2">2</div>
+      <div class="circle circle3">3</div>
+      <div class="circle circle4">4</div>
+      <div class="circle circle5">5</div>
+    </div>
+  </body>
+</html>

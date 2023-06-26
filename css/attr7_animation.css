@@ -1,0 +1,202 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  position: relative;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  /* animation: box 2s 2s infinite; */
+  animation-name: box;
+  animation-duration: 2s;
+  animation-delay: 2s;
+
+  /* transition: hover, onclick, active등의 이벤트에 의해 발생함.;
+  animation: keyframe  0% 50% 100%등 중간 스텝을 지정해서 세밀한 스타일 전환이 가능하다.; */
+
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /* linear은 일정하게, 기본은 ease(느리게 빠르게), */
+}
+
+@keyframes box {
+  0% {
+    left: 0px;
+  }
+  25% {
+    left: 100px;
+  }
+  50% {
+    left: 200px;
+  }
+
+  75% {
+    left: 100px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
+.ball {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: black;
+  /* 단축속성 */
+  animation: bounce1 1s ease-out infinite;
+}
+
+@keyframes bounce1 {
+  /* to와 0%가 같음 */
+  to {
+    top: 0px;
+  }
+  from {
+    top: 50px;
+  }
+}
+
+.ball2 {
+  width: 50px;
+  height: 50px;
+  background-color: brown;
+  position: absolute;
+  left: 200px;
+  border-radius: 50%;
+  animation: bounce2 2s infinite;
+}
+
+@keyframes bounce2 {
+  to,
+  from {
+    bottom: 0;
+    animation-timing-function: ease-out;
+    background-color: yellow;
+  }
+  50% {
+    bottom: 300px;
+    animation-timing-function: ease-in;
+    background-color: blue;
+  }
+}
+
+.ball3 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: red;
+  animation: bounce3 5s ease-in-out infinite;
+}
+
+@keyframes bounce3 {
+  0% {
+    top: 100px;
+    left: 0px;
+  }
+  25% {
+    top: 0px;
+    left: 50px;
+  }
+
+  50% {
+    top: 100px;
+    left: 100px;
+  }
+
+  75% {
+    top: 0px;
+    left: 150px;
+  }
+
+  100% {
+    top: 100px;
+    left: 200px;
+  }
+}
+
+.ball4 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, yellow, red);
+  animation: bounce4 5s ease-out infinite;
+}
+
+@keyframes bounce4 {
+  0% {
+    top: 0px;
+    left: 0px;
+    transform: rotate(0deg);
+  }
+  25% {
+    top: 0px;
+    left: calc(100vw - 100px);
+    transform: rotate(360deg);
+  }
+
+  50% {
+    top: calc(100vh - 100px);
+    left: calc(100vw - 100px);
+    transform: rotate(0deg);
+  }
+
+  75% {
+    top: calc(100vh - 100px);
+    left: 0vh;
+    transform: rotate(360deg);
+  }
+
+  100% {
+    top: 0vh;
+  }
+}
+
+@keyframes bounce5 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(calc(100vw - 100px), 0);
+  }
+
+  /* 25%기준으로 움직이는게 아니라 0%기준으로 움직여줘야함 */
+  50% {
+    transform: translate(calc(100vw - 100px), calc(100vh - 100px));
+  }
+
+  75% {
+    transform: translate(0, calc(100vh - 100px));
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.lorem {
+  border: 1px solid red;
+  /* width: 200px; */
+  animation: loremmove 5s infinite;
+}
+
+@keyframes loremmove {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0;
+    width: 100%;
+  }
+}

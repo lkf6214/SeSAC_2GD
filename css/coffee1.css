@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  width: 100vw;
+  /* height: 100%; */
+  border-bottom: 1px solid #eeee;
+}
+
+.inner {
+  width: 80vw;
+  margin: 0 auto;
+  height: 100%;
+  /* background-color: ; */
+}
+
+/* util-menu  */
+header .util-menu {
+  background-color: #eeee;
+  /* height: 100%; */
+}
+
+header .util-menu .inner {
+  /* border: 1px solid salmon; */
+}
+
+header .util-menu .inner ul {
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header .util-menu .inner ul li {
+  /* margin: 10px; */
+  /* height: 100%; */
+}
+
+header .util-menu .inner ul li:last-child {
+  background-color: #2f1c11;
+  width: 60px;
+  height: 40px;
+  background-image: url("./img/bean.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0px;
+  padding: 10px;
+}
+
+header .util-menu .inner ul li a {
+  margin: 10px;
+  font-size: 14px;
+  display: block;
+}
+
+/* main-menu */
+header .main-menu {
+  width: 100%;
+  /* height: 10vw; */
+}
+
+header .main-menu .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+header .main-menu .inner ul {
+  display: flex;
+  /* justify-content: space-around; */
+  /* height: 10vh; */
+}
+
+header .main-menu .inner ul li {
+  font-weight: bold;
+  font-size: 14px;
+  /* height: 100%;
+  width: 100%; */
+}
+
+header .main-menu .inner ul li a {
+  margin: 0 20px;
+  /* height: 100%; */
+  display: block;
+  text-align: center;
+}
+
+header .main-menu .inner .search {
+  font-size: 20px;
+  color: rgb(194, 127, 3);
+}

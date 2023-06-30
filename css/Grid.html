@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <link rel="stylesheet" href="./Grid.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </body>
+</html>
+
+<!-- /* 1번째 2번째 높이 설정.  */
+  grid-template-rows: 100px 200px;
+  /* 가로 넓이를 1대 1대 1대 2대 50px로 만들겠다는 의미.
+  나머지 6~9를 지정해주지 않으면 윗줄과 동일하게 적용 */
+  /* grid-template-columns: 1fr 1fr 1fr 2fr 50px; */
+
+  /* 각 item의 가로 넓이를 5개로 배분하겠다는 의미 */
+  grid-template-columns: repeat(5, 1fr);
+
+  /* columns 가로를 5개 칸으로 만들고, 각 20%씩 넓이를 차지하되 나머지는 auto로 하겠다 */
+  grid-template-columns: repeat(5, minmax(20%, auto));
+
+  /* row 높이 3줄을 50%로 하고, 나머지는 auto로 하겠다 */
+  grid-template-rows: repeat(3, minmax(50%, auto)); -->

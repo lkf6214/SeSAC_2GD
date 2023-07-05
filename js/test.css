@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* 헤더1 */
+.firsthead {
+  display: flex;
+  background-color: antiquewhite;
+  justify-content: space-between;
+}
+/* 여기서 어떻게 justify-content 값을
+줘야할지 모르겟음 .right에 flex-end를 주면
+안 되는 이유가 뭐임? 자식요소라서?
+그럼 어케 옮김?*/
+.leftmenu {
+  display: flex;
+  background-color: aqua;
+}
+.menu1 {
+  display: flex;
+}
+.menu1 > li {
+  background-color: yellow;
+  margin-left: 10px;
+}
+.rightmenu {
+  background-color: aqua;
+}
+.right {
+  background-color: lightblue;
+  margin-left: 10px;
+}
+/* .firsthead2 {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+} */
+/* .right {
+background-color: yellowgreen;
+margin-left: 10px;
+} */
+/* 헤더2 */
+.secondhead {
+  display: flex;
+  background-color: rgb(143, 92, 30);
+  justify-content: flex-start;
+  align-items: center;
+}
+.menu3 {
+  display: flex;
+}
+/* 여기에 flex를 줘야 자식 li가 플렉스 */
+.menu3 > li {
+  background-color: purple;
+  margin-left: 20px;
+}
+/* 메인 사진 */
+.onearticle {
+  display: flex;
+  background-color: brown;
+  width: 100vw;
+  height: 500px;
+}
+/* 푸터1 */
+.firstfooter {
+  display: flex;
+  justify-content: space-between;
+  background-color: aquamarine;
+  width: 100vw;
+  height: 50px;
+}
+.menu4 {
+  display: flex;
+}
+.menu4 > li {
+  background-color: lightcoral;
+  margin-left: 10px;
+}
+.sns {
+  background-color: hotpink;
+}
+/* 푸터2 */
+.secondfooter {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: aqua;
+  align-items: center;
+}
+.menu5 {
+  display: flex;
+}
+.menu5 > li {
+  background-color: orange;
+  margin-left: 10px;
+}
+.stussy {
+  background-color: lightsalmon;
+}

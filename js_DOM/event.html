@@ -6,6 +6,10 @@
     <title>이벤트 리스너</title>
     <script defer src="./event.js"></script>
     <style>
+      body {
+        height: 2000px;
+        position: relative;
+      }
       .btn {
         width: 80px;
         height: 35px;
@@ -32,6 +36,15 @@
         background-color: orangered;
         color: #fff;
       }
+
+      .pos {
+        position: absolute;
+        bottom: 100px;
+        width: 100px;
+        height: 100px;
+        opacity: 0.3;
+        transition: 2s;
+      }
     </style>
   </head>
   <body>
@@ -40,5 +53,22 @@
     <div class="btn btn--blue">버튼3</div>
     <div class="btn btn--red">버튼4</div>
     <div id="container"></div>
+    <div class="pos btn--red">1</div>
+
+    <!-- 이벤트 객체 확인 & keydown -->
+    <input type="text" />
+    <button>click</button>
+    <hr />
+    <!-- 변경이벤트 -->
+    <input type="text" id="change-input" />
+    <div class="box"></div>
+    <hr />
+    <h3>form 이벤트</h3>
+    <h5>Todo list</h5>
+    <form id="todo-form">
+      <input type="text" name="todo" />
+      <button>Add</button>
+    </form>
+    <ul class="todos"></ul>
   </body>
 </html>

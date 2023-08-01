@@ -6,7 +6,7 @@ tl1
     xPercent: 200,
   })
   .to(".cloud2", {
-    scale: 2,
+    scale: 3,
     opacity: 0,
     xPercent: -100,
   })

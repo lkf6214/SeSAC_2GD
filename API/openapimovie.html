@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- open API key : 570f4d50 -->
+    <!-- http://img.omdbapi.com/?apikey=[570f4d50]& -->
+    <!-- 파라미터끼리는 &으로 묶는다 -->
+    <style>
+      ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      ul p {
+        width: 200px;
+      }
+
+      ul img {
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>영화 API 사용해보기</h2>
+    <h4></h4>
+    <ul></ul>
+
+    <script>
+      async function getMovieData() {
+        let word = "love";
+        // let word = "good"; 등등 바꿀 수 있음. input 형태로 단어 입력할 수도
+
+        const response = await fetch(
+          `http://www.omdbapi.com/?apikey=570f4d50&s=${word}`,
+          //   `http://www.img.omdbapi.com/?apikey=[570f4d50]&s=${word}`,
+          //   ex. word는 love란 단어를 입력했을 ㄸ ㅐ 제목에 love가 들어간 영화를 찾아주는 것
+          {
+            method: "GET",
+          }
+        );
+
+        const movieData = await response.json();
+        console.log(movieData);
+        console.log(movieData.Search);
+
+        //html
+        const h4 = document.querySelector("h4");
+        h4.innerText = `영화 검색 키워드 : ${word}`;
+        // [
+        //   {
+        //     Title: "dudlgad",
+        //     Poster: "~~.jpg",
+        //   },
+        // ];
+
+        const ul = document.querySelector("ul");
+        for (let movie of movieData.Search) {
+          // ul > div*10 >img+p
+          const div = document.createElement("div");
+          const img = document.createElement("img");
+          const p = document.createElement("p");
+
+          img.setAttribute("src", movie.Poster);
+          img.setAttribute("alt", movie.Title);
+          p.innerText = movie.Title;
+          div.append(img, p);
+          ul.append(div);
+        }
+      }
+      getMovieData();
+    </script>
+  </body>
+</html>

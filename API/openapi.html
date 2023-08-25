@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>open API</title>
+  </head>
+  <body>
+    <h1>open API</h1>
+    <h1>고양이사진 랜덤으로 받아오기</h1>
+    <div id="cat">
+      <button onclick="location.reload()">사진바꾸기</button>
+    </div>
+    <script>
+      fetch("https://api.thecatapi.com/v1/images/search")
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          //   console.log(data);
+          //   console.log(data[0]);
+          //   console.log(data[0].id);
+          //   console.log(data[0].url);
+          //   console.log(data[0].height);
+          //   console.log(data[0].width);
+
+          const img = document.createElement("img");
+          img.src = data[0].url;
+          img.alt = `cat-${data[0].id}`;
+          img.width = 500;
+          document.querySelector("#cat").prepend(img);
+        });
+    </script>
+  </body>
+</html>
